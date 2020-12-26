@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainViewComponent } from './main-view.component';
+import { UnderBuildComponent } from './under-build/under-build.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,16 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('../main-view/homepage/homepage.module').then(m => m.HomepageModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('../main-view/about/about.module').then(m => m.AboutModule)
       }
     ]
+  },
+  {
+    path: 'underbuild',
+    component: UnderBuildComponent,
   }
 ];
 
