@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~swiper/swiper-bundle";
+@import'/src/assets/stylesheet/variable',
+'/src/assets/stylesheet/mixins',
+'/src/assets/stylesheet/functions',
+'/src/assets/stylesheet/misc',
+'/src/assets/stylesheet/responsive';
+
+body {
+  background-color: $background;
+  margin: 0px;
+  width: 100%;
+  font-size: size(2);
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+}
+

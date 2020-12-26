@@ -1,0 +1,117 @@
+@import '/src/assets/stylesheet/variable',
+'/src/assets/stylesheet/mixins',
+'/src/assets/stylesheet/functions',
+'/src/assets/stylesheet/misc';
+
+header {
+  @include tablet {
+    background-color: rgba($color: $primary-color, $alpha: 0.25);
+    padding: 10px 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 3.5;
+    transition: all .3s ease-in-out;
+
+    @include tablet {
+      display: block;
+      line-height: 1;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &-brand {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+      }
+
+      a {
+        font-size: size(3);
+        font-weight: $bold;
+        color: $primary-link;
+        font-family: $primary-font;
+      }
+
+      .transparent-btn {
+        display: none;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        outline: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      column-gap: size(1.5);
+
+      @include tablet {
+        max-height: 0;
+        transition: max-height 0.15s ease-out;
+        overflow: hidden;
+      }
+
+      ul {
+        @extend %flex;
+        list-style: none;
+        column-gap: size(2);
+        margin-bottom: 0;
+
+        @include tablet {
+          display: block;
+          padding-left: 0;
+        }
+
+        li {
+          @include tablet {
+            padding: 10px 0;
+          }
+
+          a {
+            color: $secondary-color;
+            @extend %transition;
+            font-family: $secondary-font;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &-social {
+      padding-left: 0;
+
+      @include tablet {
+        display: none !important;
+      }
+    }
+  }
+
+  &.active {
+    .navbar-menu {
+      border-top: 1px solid $secondary-color;
+      margin: 0 -15px;
+      padding: 0 15px;
+      max-height: 500px;
+      transition: max-height 0.25s ease-in;
+    }
+  }
+}

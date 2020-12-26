@@ -1,0 +1,97 @@
+@import '/src/assets/stylesheet/variable',
+'/src/assets/stylesheet/mixins',
+'/src/assets/stylesheet/functions',
+'/src/assets/stylesheet/misc',
+'/src/assets/stylesheet/responsive';
+
+.testimonial {
+  &-single {
+    background-color: #172a45;
+    padding: 26px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    margin: 0 5px;
+    height: size(23.5);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    @include mobile {
+      height: auto;
+      padding: 10px 15px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px lighten($color: $background, $amount: 5);
+    }
+
+    .client {
+      &-img {
+        margin-bottom: 10px;
+        @extend %flex,
+        %justify-between;
+
+        @include mobile {
+          margin-bottom: 5px;
+        }
+
+        &-single {
+          width: 70px;
+          height: 70px;
+          overflow: hidden;
+          border-radius: 50%;
+
+          @include mobile {
+            width: size(3.5);
+            height: size(3.5);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .right-icon {
+          i {
+            font-size: 70px;
+            color: rgba($color: $secondary-color, $alpha: 0.3);
+
+            @include mobile {
+              font-size: size(4.5);
+            }
+          }
+        }
+      }
+
+      &-name {
+        p {
+          font-family: $primary-font;
+          color: $primary-color;
+          font-weight: $medium;
+          font-size: 22px;
+          margin-bottom: 10px;
+
+          @include mobile {
+            font-size: size(1.8);
+          }
+        }
+      }
+
+      &-comment {
+        p {
+          margin-bottom: 0;
+          color: $secondary-color;
+          font-family: $secondary-font;
+          font-weight: $regular;
+          font-size: 17px;
+
+          @include mobile {
+            font-size: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
