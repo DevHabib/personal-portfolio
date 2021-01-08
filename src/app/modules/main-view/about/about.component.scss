@@ -132,13 +132,21 @@
     }
   }
 
+  @include tablet-landscape {
+    .mid-gap {
+      margin-bottom: size(3);
+    }
+  }
+
   &-details {
     margin-top: size(3.5);
     background-color: lighten($color: $background, $amount: 5);
     border-radius: 10px;
     padding: 20px 30px;
     text-align: center;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+    margin-bottom: size(3);
 
     &-icon {
       width: size(8);

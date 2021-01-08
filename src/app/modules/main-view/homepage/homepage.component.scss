@@ -7,7 +7,11 @@
 
 // Hero
 .hero {
-  height: 80vh;
+  height: auto;
+
+  @include desktop {
+    height: 80vh;
+  }
 
   @include tablet-landscape {
     height: 55vh;
@@ -434,6 +438,73 @@
   }
 }
 
+// services
+.services {
+  padding: 40px 0 80px;
+  display: block;
+
+  &-box {
+    background-color: #172a45;
+    padding: 26px 20px;
+    border-radius: 15px;
+    position: relative;
+    min-height: size(20);
+    height: auto;
+    z-index: 1;
+
+    @include tablet-landscape {
+      margin-bottom: size(3);
+    }
+
+    &:hover {
+      .services-content {
+        p {
+          -webkit-line-clamp: inherit;
+        }
+      }
+    }
+
+    &-top {
+      h3 {
+        color: lighten($color: $secondary-color, $amount: 20);
+        font-family: $primary-font;
+        font-weight: $bold;
+        font-size: size(2.8);
+      }
+
+      img {
+        position: absolute;
+        opacity: 0.05;
+        z-index: -1;
+        width: size(7);
+        height: size(7);
+        object-fit: contain;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+
+  &-content {
+    p {
+      color: darken($color: #fff, $amount: 40);
+      font-family: $secondary-font;
+      font-weight: $light;
+      font-size: size(1.8);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      margin-bottom: 0;
+      @include tablet{
+        -webkit-line-clamp: inherit;
+      }
+    }
+  }
+
+
+}
+
 // Experience
 .experience {
   padding: size(4) 0 size(8);
@@ -550,7 +621,7 @@
       padding: 30px;
       background-color: #172a45;
       border-radius: 15px;
-      box-shadow: -3px 3px 10px lighten($color: $background, $amount: 5);
+      box-shadow: 0px 3px 10px 5px rgb(14 36 68 / 36%);
 
       @include tablet-landscape {
         margin-right: 0;
