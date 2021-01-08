@@ -1,6 +1,6 @@
 <div class="swiper-container">
   <swiper [config]="config2" class="swiper-wrapper">
-    <div class="swiper-slide">
+    <div class="swiper-slide" *ngFor="let client of clients; index as i;">
       <div class="testimonial-single">
         <div class="client-img">
           <div class="client-img-single">
@@ -11,10 +11,10 @@
           </div>
         </div>
         <div class="client-name">
-          <p>Milan Lee</p>
+          <p>{{client.name}}</p>
         </div>
         <div class="client-comment">
-          <p>He is a gold mine. He is an excellent communicator. I will be using his services for days to come. </p>
+          <p>{{client.des}}</p>
         </div>
       </div>
     </div>

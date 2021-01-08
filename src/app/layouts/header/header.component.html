@@ -1,7 +1,7 @@
 <header id="menu">
   <nav class="navbar container">
     <div class="navbar-brand">
-      <a href="#">Habib</a>
+      <a [routerLink]="['/']">Habib</a>
       <button class="transparent-btn" (click)="menu()">
         <i class="fas fa-bars"></i>
       </button>
@@ -10,18 +10,18 @@
       <ul>
         <li><a [routerLink]="['/']">Home</a></li>
         <li><a [routerLink]="['about']">About</a></li>
-        <li><a [routerLink]="['underbuild']">Service</a></li>
+        <li><a [routerLink]="['service']">Service</a></li>
         <li><a [routerLink]="['underbuild']">Portfolio</a></li>
         <li><a [routerLink]="['underbuild']">Contact</a></li>
       </ul>
       <ul class="navbar-social">
         <li>
-          <a href="https://www.linkedin.com/in/devhabib/">
+          <a target="_blank" href="https://www.linkedin.com/in/devhabib/">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li>
-          <a href="https://github.com/DevHabib">
+          <a target="_blank" href="https://github.com/DevHabib">
             <i class="fab fa-github"></i>
           </a>
         </li>

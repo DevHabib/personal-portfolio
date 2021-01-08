@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~swiper/swiper-bundle";
-@import'/src/assets/stylesheet/variable',
+@import '/src/assets/stylesheet/_fonts',
+'/src/assets/stylesheet/variable',
 '/src/assets/stylesheet/mixins',
 '/src/assets/stylesheet/functions',
 '/src/assets/stylesheet/misc',
@@ -16,4 +17,3 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.3;
 }
-

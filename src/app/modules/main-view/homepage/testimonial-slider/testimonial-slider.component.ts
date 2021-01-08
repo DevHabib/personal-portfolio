@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-
+import { TestimonialService } from '../../../../services/testimonial-service.service'
 @Component({
   selector: 'testimonial-slider',
   templateUrl: './testimonial-slider.component.html',
-  styleUrls: ['./testimonial-slider.component.scss']
+  styleUrls: ['./testimonial-slider.component.scss'],
+
 })
 export class TestimonialSliderComponent implements OnInit {
+
   public config2: SwiperConfigInterface = {
     loop: true,
     speed: 1600,
@@ -34,9 +36,15 @@ export class TestimonialSliderComponent implements OnInit {
       }
     }
   };
-  constructor() { }
+
+clients;
+
+  constructor(TestimonialService : TestimonialService) {
+    this.clients = TestimonialService['clients'];
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

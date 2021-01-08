@@ -23,6 +23,8 @@
     font-size: size(4);
     font-family: $primary-font;
     margin-bottom: size(2);
+    font-weight: 800;
+    letter-spacing: 1px;
 
     @include tablet-landscape {
       font-size: size(3);
