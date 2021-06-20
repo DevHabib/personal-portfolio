@@ -15,7 +15,7 @@
 }
 
 %transition {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .align-center {
@@ -55,17 +55,20 @@ img {
   text-decoration: none;
   display: inline-block;
   padding: size(2) size(3.5);
-  border: size(.1) solid $primary-link;
-  border-radius: size(.5);
-  transition: .3s;
+  border: size(0.1) solid $primary-link;
+  border-radius: size(0.5);
+  transition: 0.3s;
   font-size: size(1.6);
   font-weight: $medium;
   font-family: $secondary-font;
   background-color: transparent;
   margin: size(2) 0;
-
+  @include tablet {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
   &:hover {
-    background-color: transparentize($primary-link, 0.9)
+    background-color: transparentize($primary-link, 0.9);
   }
 }
 
@@ -79,7 +82,7 @@ img {
   &-mini {
     position: relative;
 
-    @include tablet-landscape {
+    @include mobile-landscape {
       margin-bottom: 0;
     }
 
@@ -98,7 +101,7 @@ img {
       background-color: $primary-link;
       transform: translateY(-50%);
 
-      @include tablet {
+      @include mobile-landscape {
         display: none;
       }
     }
@@ -124,11 +127,11 @@ img {
       font-weight: $bold;
       font-size: size(3.5);
 
-      @include tablet-landscape {
+      @include mobile-landscape {
         font-size: size(3);
       }
 
-      @include tablet {
+      @include mobile-landscape {
         font-size: size(2.7);
       }
 

@@ -1,9 +1,5 @@
-@import '/src/assets/stylesheet/variable',
-'/src/assets/stylesheet/mixins',
-'/src/assets/stylesheet/functions',
-'/src/assets/stylesheet/misc',
-'/src/assets/stylesheet/responsive';
-
+@import "/src/assets/stylesheet/variable", "/src/assets/stylesheet/mixins", "/src/assets/stylesheet/functions",
+  "/src/assets/stylesheet/misc", "/src/assets/stylesheet/responsive";
 
 // Hero
 .hero {
@@ -13,11 +9,11 @@
     height: 80vh;
   }
 
-  @include tablet-landscape {
+  @include tablet {
     height: 55vh;
   }
 
-  @include tablet {
+  @include mobile-landscape {
     height: 100%;
     margin-top: 40px;
   }
@@ -30,11 +26,11 @@
     font-weight: 800;
     letter-spacing: 1px;
 
-    @include tablet-landscape {
+    @include tablet {
       font-size: size(3);
     }
 
-    @include tablet {
+    @include mobile-landscape {
       font-size: size(2.5);
     }
 
@@ -46,24 +42,28 @@
   &-des {
     color: $secondary-color;
     line-height: 1.5;
-    font-size: size(2.7);
+    font-size: size(2.2);
     margin-bottom: size(2.5);
     font-family: $secondary-font;
-
-    @include tablet-landscape {
+    span {
       font-size: size(2.2);
     }
-
     @include tablet {
       font-size: size(2);
+      span {
+        font-size: size(2);
+      }
     }
 
-    @include mobile {
+    @include mobile-landscape {
       font-size: size(1.7);
+      span {
+        font-size: size(1.7);
+      }
     }
 
     span {
-      border-bottom: size(.1) solid $primary-link;
+      border-bottom: size(0.1) solid $primary-link;
     }
   }
 
@@ -71,8 +71,7 @@
     ul {
       padding-left: 0;
       list-style: none;
-      @extend %flex,
-      %align-center;
+      @extend %flex, %align-center;
       column-gap: size(2);
       margin-bottom: 0;
 
@@ -85,13 +84,13 @@
           display: block;
           transform-origin: center;
 
-          @include tablet-landscape {
+          @include tablet {
             font-size: size(2.5);
             width: 25px;
             height: 28px;
           }
 
-          @include tablet {
+          @include mobile-landscape {
             font-size: size(2);
             width: size(2);
             height: size(2.2);
@@ -120,8 +119,7 @@
   }
 
   &-social {
-    @extend %flex,
-    %align-center;
+    @extend %flex, %align-center;
     color: $primary-color;
     font-family: $primary-font;
     font-weight: $semi-bold;
@@ -134,11 +132,11 @@
       font-family: $primary-font;
       font-weight: $bold;
 
-      @include tablet-landscape {
+      @include tablet {
         font-size: size(2.5);
       }
 
-      @include tablet {
+      @include mobile-landscape {
         font-size: size(2);
       }
 
@@ -151,7 +149,7 @@
   &-slider {
     position: relative;
 
-    @include tablet-landscape {
+    @include tablet {
       display: none;
     }
 
@@ -176,14 +174,14 @@
   padding: size(8) 0 0;
   overflow: hidden;
 
-  @include tablet {
+  @include mobile-landscape {
     padding: size(6) 0 0;
   }
 
   .section-title {
     display: none;
 
-    @include tablet {
+    @include mobile-landscape {
       display: block;
     }
   }
@@ -199,7 +197,7 @@
     position: relative;
     top: 0;
 
-    @include tablet {
+    @include mobile-landscape {
       margin: 0px;
       transform: rotate(0);
       column-gap: 30px;
@@ -216,7 +214,7 @@
     transform-origin: center center;
     transition-duration: 294ms;
 
-    @include tablet {
+    @include mobile-landscape {
       margin: 0;
       overflow: hidden;
       width: 47%;
@@ -229,7 +227,7 @@
     &:nth-child(2n) {
       top: size(6);
 
-      @include tablet {
+      @include mobile-landscape {
         top: 0;
       }
     }
@@ -247,8 +245,8 @@
       background-position: 50%;
       background-size: cover;
       padding-top: 62.5%;
-      border-radius: .5vw;
-      box-shadow: 0 2vh 5vw rgba(0, 0, 0, .3);
+      border-radius: 0.5vw;
+      // box-shadow: 0 2vh 5vw rgba(0, 0, 0, 0.3);
       @extend %transition;
 
       &:hover {
@@ -258,27 +256,27 @@
     }
 
     &-1 {
-      background-image: url('../../../../assets/img/project1.jpeg');
+      background-image: url("../../../../assets/img/project1.jpeg");
     }
 
     &-2 {
-      background-image: url('../../../../assets/img/project2.jpeg');
+      background-image: url("../../../../assets/img/project2.jpeg");
     }
 
     &-3 {
-      background-image: url('../../../../assets/img/project3.jpeg');
+      background-image: url("../../../../assets/img/project3.jpeg");
     }
 
     &-4 {
-      background-image: url('../../../../assets/img/workflow4.jpg');
+      background-image: url("../../../../assets/img/workflow4.jpg");
     }
 
     &-5 {
-      background-image: url('../../../../assets/img/workflow5.jpg');
+      background-image: url("../../../../assets/img/workflow5.jpg");
     }
 
     &-6 {
-      background-image: url('../../../../assets/img/workflow6.png');
+      background-image: url("../../../../assets/img/workflow6.png");
     }
   }
 }
@@ -288,7 +286,7 @@
   padding: 80px 0;
 
   &-single {
-    background-color: #172a45;
+    background-color: $background2;
     padding: 26px 20px;
     border-radius: 15px;
     transition: 0.3s;
@@ -297,7 +295,6 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-
     &:hover {
       box-shadow: 0px 0px 10px lighten($color: $background, $amount: 5);
     }
@@ -305,8 +302,7 @@
     .client {
       &-img {
         margin-bottom: 10px;
-        @extend %flex,
-        %justify-between;
+        @extend %flex, %justify-between;
 
         &-single {
           width: 70px;
@@ -324,7 +320,7 @@
         .right-icon {
           i {
             font-size: 70px;
-            color: rgba($color: $secondary-color, $alpha: 0.3)
+            color: rgba($color: $secondary-color, $alpha: 0.3);
           }
         }
       }
@@ -361,13 +357,11 @@
     text-align: center;
     width: 100%;
     height: 250px;
-    @extend %flex,
-    %align-center,
-    %justify-center;
+    @extend %flex, %align-center, %justify-center;
     flex-flow: column;
     row-gap: 20px;
 
-    @include tablet {
+    @include mobile-landscape {
       height: 180px;
     }
 
@@ -375,7 +369,7 @@
       font-size: 60px;
       color: #fff;
 
-      @include tablet {
+      @include mobile-landscape {
         font-size: 45px;
       }
     }
@@ -389,7 +383,7 @@
       font-weight: $semi-bold;
       font-size: size(2);
 
-      @include tablet {
+      @include mobile-landscape {
         font-size: size(1.8);
       }
 
@@ -444,16 +438,16 @@
   display: block;
 
   &-box {
-    background-color: #172a45;
+    background-color: $background2;
     padding: 26px 20px;
     border-radius: 15px;
     position: relative;
     min-height: size(20);
-    height: auto;
+    height: 100%;
     z-index: 1;
-
-    @include tablet-landscape {
+    @include tablet {
       margin-bottom: size(3);
+      height: calc(100% - 30px);
     }
 
     &:hover {
@@ -490,19 +484,16 @@
       color: darken($color: #fff, $amount: 40);
       font-family: $secondary-font;
       font-weight: $light;
-      font-size: size(1.8);
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 5;
       overflow: hidden;
       margin-bottom: 0;
-      @include tablet{
+      @include mobile-landscape {
         -webkit-line-clamp: inherit;
       }
     }
   }
-
-
 }
 
 // Experience
@@ -515,15 +506,15 @@
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       background-color: $primary-color;
-      width: size(.3);
+      width: size(0.3);
       height: 100%;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
 
-      @include tablet-landscape {
+      @include tablet {
         left: -20px;
       }
 
@@ -552,7 +543,7 @@
           transform: translate(40%, -50%);
         }
 
-        @include tablet-landscape {
+        @include tablet {
           right: 0;
           left: -64px;
         }
@@ -576,7 +567,7 @@
             transform: translate(20%, -40%);
           }
 
-          @include tablet-landscape {
+          @include tablet {
             right: 0;
             left: -64px;
           }
@@ -588,15 +579,10 @@
       }
 
       h3 {
-        font-size: size(3.2);
         color: $primary-color;
         font-weight: $bold;
         margin-bottom: 0;
         font-family: $primary-font;
-
-        @include tablet {
-          font-size: size(2.5);
-        }
       }
     }
 
@@ -605,11 +591,10 @@
         color: $secondary-color;
         font-weight: $medium;
         font-family: $primary-font;
-
-        @include tablet {
+        margin: 0;
+        @include mobile-landscape {
           margin: 10px 0;
           line-height: 1;
-          font-size: 16px;
         }
       }
     }
@@ -619,11 +604,11 @@
       margin-right: auto;
       text-align: right;
       padding: 30px;
-      background-color: #172a45;
+      background-color: #0c1d37;
       border-radius: 15px;
-      box-shadow: 0px 3px 10px 5px rgb(14 36 68 / 36%);
+      // box-shadow: 0px 3px 10px 5px rgb(14 36 68 / 36%);
 
-      @include tablet-landscape {
+      @include tablet {
         margin-right: 0;
         width: 100%;
         margin-bottom: size(3);
@@ -634,7 +619,7 @@
         margin-left: auto;
         margin-right: 0;
         text-align: left;
-        box-shadow: 3px 3px 10px lighten($color: $background, $amount: 5);
+        // box-shadow: 3px 3px 10px lighten($color: $background, $amount: 5);
 
         .experience-entries-title {
           position: relative;
@@ -664,7 +649,7 @@
                 transform: translate(20%, -40%);
               }
 
-              @include tablet-landscape {
+              @include tablet {
                 right: 0;
                 left: -68px;
                 transform: translateX(5px);
@@ -680,12 +665,7 @@
         margin-bottom: 0;
         color: $secondary-color;
         font-weight: $regular;
-        font-size: size(1.8);
         font-family: $secondary-font;
-
-        @include tablet {
-          font-size: 16px;
-        }
       }
     }
   }
@@ -713,12 +693,11 @@
     text-align: right;
     flex: 1 48%;
     padding: 20px;
-    box-shadow: 0px 0px 10px #0e2444;
-    height: 140px;
+    background-color: #0c1d37;
     border-radius: 10px;
-    height: size(20);
+    height: size(16);
 
-    @include tablet-landscape {
+    @include tablet {
       flex-direction: initial;
       text-align: left;
     }
@@ -734,30 +713,24 @@
 
     &-left {
       i {
-        font-size: size(6);
+        font-size: size(5.5);
         color: $secondary-color;
-        opacity: .4;
+        opacity: 0.4;
       }
     }
 
     &-right {
       display: flex;
       flex-flow: column;
-      row-gap: 20px;
-
-      @include mobile {
-        row-gap: 15px;
-      }
+      row-gap: 5px;
 
       h3 {
         color: $primary-color;
-        font-size: size(2.5);
         margin-bottom: 0;
         font-family: $primary-font;
         font-weight: $bold;
 
         @include mobile {
-          font-size: size(2);
         }
       }
 
@@ -765,10 +738,6 @@
         margin-bottom: 0;
         font-weight: $medium;
         font-family: $secondary-font !important;
-
-        @include mobile {
-          font-size: size(1.6);
-        }
       }
     }
 
@@ -793,7 +762,6 @@
     max-width: size(60);
     margin: auto;
     padding: 0 15px;
-
   }
 
   &-title {
@@ -822,8 +790,6 @@
   &-content {
     p {
       color: $secondary-color;
-      font-size: size(1.8);
-      line-height: 1.5;
       font-family: $secondary-font;
       font-weight: $medium;
     }
@@ -831,21 +797,24 @@
 
   &-button {
     margin-top: size(4);
-
+    @include tablet {
+      margin-top: size(1.5);
+    }
     a {
       color: $primary-link;
       text-decoration: none;
       display: inline-block;
       padding: size(2) size(3.5);
-      border: size(.1) solid $primary-link;
-      border-radius: size(.5);
-      transition: .3s;
-      font-size: size(1.6);
+      border: size(0.1) solid $primary-link;
+      border-radius: size(0.5);
+      transition: 0.3s;
       font-weight: $medium;
       font-family: $secondary-font;
-
+      @include tablet {
+        padding: size(1.5) size(2.5);
+      }
       &:hover {
-        background-color: transparentize($primary-link, 0.9)
+        background-color: transparentize($primary-link, 0.9);
       }
     }
   }

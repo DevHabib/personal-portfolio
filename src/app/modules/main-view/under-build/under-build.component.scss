@@ -1,8 +1,5 @@
-@import '/src/assets/stylesheet/variable',
-'/src/assets/stylesheet/mixins',
-'/src/assets/stylesheet/functions',
-'/src/assets/stylesheet/misc',
-'/src/assets/stylesheet/responsive';
+@import "/src/assets/stylesheet/variable", "/src/assets/stylesheet/mixins", "/src/assets/stylesheet/functions",
+  "/src/assets/stylesheet/misc", "/src/assets/stylesheet/responsive";
 
 .underbuild {
   height: 100vh;
@@ -21,9 +18,7 @@
 }
 
 .hero-social {
-  @extend %flex,
-  %align-center,
-  %justify-center;
+  @extend %flex, %align-center, %justify-center;
   color: $primary-color;
   font-family: $primary-font;
   font-weight: $semi-bold;
@@ -36,11 +31,11 @@
     font-family: $primary-font;
     font-weight: $bold;
 
-    @include tablet-landscape {
+    @include mobile-landscape {
       font-size: size(2.5);
     }
 
-    @include tablet {
+    @include mobile-landscape {
       font-size: size(2);
     }
 
@@ -66,13 +61,13 @@
         display: block;
         transform-origin: center;
 
-        @include tablet-landscape {
+        @include mobile-landscape {
           font-size: size(2.5);
           width: 25px;
           height: 28px;
         }
 
-        @include tablet {
+        @include mobile-landscape {
           font-size: size(2);
           width: size(2);
           height: size(2.2);

@@ -1,11 +1,9 @@
-@import '/src/assets/stylesheet/variable',
-'/src/assets/stylesheet/mixins',
-'/src/assets/stylesheet/functions',
-'/src/assets/stylesheet/misc';
+@import "/src/assets/stylesheet/variable", "/src/assets/stylesheet/mixins", "/src/assets/stylesheet/functions",
+  "/src/assets/stylesheet/misc";
 
 header {
-  @include tablet {
-    background-color: #081527;
+  @include mobile-landscape {
+    background-color: $background2;
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -16,9 +14,9 @@ header {
     display: flex;
     justify-content: space-between;
     line-height: 3.5;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
-    @include tablet {
+    @include mobile-landscape {
       display: block;
       line-height: 1;
       width: 100%;
@@ -29,7 +27,7 @@ header {
     }
 
     &-brand {
-      @include tablet {
+      @include mobile-landscape {
         display: flex;
         justify-content: space-between;
         padding-bottom: 10px;
@@ -53,7 +51,7 @@ header {
           outline: none;
         }
 
-        @include tablet {
+        @include mobile-landscape {
           display: block;
         }
       }
@@ -64,7 +62,7 @@ header {
       align-items: center;
       column-gap: size(1.5);
 
-      @include tablet {
+      @include mobile-landscape {
         max-height: 0;
         transition: max-height 0.15s ease-out;
         overflow: hidden;
@@ -76,13 +74,13 @@ header {
         column-gap: size(2);
         margin-bottom: 0;
 
-        @include tablet {
+        @include mobile-landscape {
           display: block;
           padding-left: 0;
         }
 
         li {
-          @include tablet {
+          @include mobile-landscape {
             padding: 10px 0;
           }
 
@@ -106,7 +104,7 @@ header {
     &-social {
       padding-left: 0;
 
-      @include tablet {
+      @include mobile-landscape {
         display: none !important;
       }
     }

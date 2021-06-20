@@ -1,8 +1,5 @@
-@import '/src/assets/stylesheet/variable',
-'/src/assets/stylesheet/mixins',
-'/src/assets/stylesheet/functions',
-'/src/assets/stylesheet/misc',
-'/src/assets/stylesheet/responsive';
+@import "/src/assets/stylesheet/variable", "/src/assets/stylesheet/mixins", "/src/assets/stylesheet/functions",
+  "/src/assets/stylesheet/misc", "/src/assets/stylesheet/responsive";
 
 .footer {
   padding: 25px 0;
@@ -10,12 +7,10 @@
   display: block;
   text-align: center;
   color: $primary-color;
-  background-color: darken($color: $background, $amount: 2);
+  background-color: $background2;
 
   &-bottom {
-    @extend %flex,
-    %justify-between,
-    %align-center;
+    @extend %flex, %justify-between, %align-center;
     flex-wrap: wrap;
 
     @include mobile {
@@ -27,7 +22,6 @@
   p {
     margin-bottom: 0;
     font-weight: $regular;
-    font-size: size(1.6);
     font-family: $secondary-font;
     color: $secondary-color;
   }
@@ -51,7 +45,6 @@
         color: $secondary-color;
         font-weight: $medium;
         font-family: $secondary-font;
-        font-size: size(1.6);
       }
     }
   }

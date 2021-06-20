@@ -23,16 +23,8 @@ export class TestimonialSliderComponent implements OnInit {
     // centeredSlides: false,
     breakpoints: {
       992: { slidesPerView: 2 },
-      767: {
-        slidesPerView: 1
-      },
-      575: {
-        slidesPerView: 1
-      },
-      320: {
-        slidesPerView: 1
-      },
       280: {
+        slidesPerView: 1
       }
     }
   };
