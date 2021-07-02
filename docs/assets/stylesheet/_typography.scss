@@ -1,0 +1,95 @@
+p,
+a,
+button {
+  font-family: $secondary-font;
+  font-weight: $regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.125;
+  font-family: $primary-font;
+  font-weight: $semi-bold;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  @include tablet{
+    font-size: 2.6rem;
+  }
+  @include mobile-landscape{
+    font-size: 2.5;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  @include tablet{
+    font-size: 2.3rem;
+  }
+  @include mobile-landscape{
+    font-size: 2.2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  @include tablet{
+    font-size: 1.8rem;
+  }
+  @include mobile-landscape{
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  @include tablet{
+    font-size: 1.4rem;
+  }
+  @include mobile-landscape{
+    font-size: 1.3rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+  @include tablet{
+    font-size: 1.1rem;
+  }
+  @include mobile-landscape{
+    font-size: 1rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  @include tablet{
+    font-size: .9rem;
+  }
+  @include mobile-landscape{
+    font-size: .8rem;
+  }
+}
+p,
+a,
+button,
+span {
+  font-size: 16px;
+  line-height: 1.5;
+  @include tablet {
+    font-size: 14px;
+  }
+  @include mobile-landscape {
+    font-size: 13px;
+  }
+}

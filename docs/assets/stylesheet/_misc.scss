@@ -1,0 +1,143 @@
+%flex {
+  display: flex;
+}
+
+%align-center {
+  align-items: center;
+}
+
+%justify-between {
+  justify-content: space-between;
+}
+
+%justify-center {
+  justify-content: center;
+}
+
+%transition {
+  transition: 0.3s;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.active {
+  color: $primary-color !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+.primary-btn {
+  color: $primary-link;
+  text-decoration: none;
+  display: inline-block;
+  padding: size(2) size(3.5);
+  border: size(0.1) solid $primary-link;
+  border-radius: size(0.5);
+  transition: 0.3s;
+  font-size: size(1.6);
+  font-weight: $medium;
+  font-family: $secondary-font;
+  background-color: transparent;
+  margin: size(2) 0;
+  @include tablet {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  &:hover {
+    background-color: transparentize($primary-link, 0.9);
+  }
+}
+
+.section-title {
+  margin-bottom: 40px;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  &-mini {
+    position: relative;
+
+    @include mobile-landscape {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: -50px;
+      top: 50%;
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: $primary-link;
+      transform: translateY(-50%);
+
+      @include mobile-landscape {
+        display: none;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: size(1.8);
+      color: $primary-color;
+      font-family: $secondary-font;
+      font-weight: $medium;
+
+      @include mobile {
+        font-size: size(1.6);
+      }
+    }
+  }
+
+  &-big {
+    h3 {
+      margin-bottom: 0;
+      color: $primary-link;
+      font-family: $primary-font;
+      font-weight: $bold;
+      font-size: size(3.5);
+
+      @include mobile-landscape {
+        font-size: size(3);
+      }
+
+      @include mobile-landscape {
+        font-size: size(2.7);
+      }
+
+      @include mobile {
+        font-size: size(2.2);
+      }
+    }
+  }
+}

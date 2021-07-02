@@ -1,0 +1,14 @@
+@import 'variable',
+'mixins',
+'functions',
+'misc';
+
+@include desktop {
+  header {
+    .navbar-brand {
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
