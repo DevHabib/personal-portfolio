@@ -15,7 +15,7 @@ const routes: Routes = [
       {
         path: 'about',
         loadChildren: () => import('../main-view/about/about.module').then(m => m.AboutModule)
-      }
+      },
     ]
   },
   {

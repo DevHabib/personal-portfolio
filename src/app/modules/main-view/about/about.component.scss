@@ -1,8 +1,5 @@
-@import '/src/assets/stylesheet/variable',
-'/src/assets/stylesheet/mixins',
-'/src/assets/stylesheet/functions',
-'/src/assets/stylesheet/misc',
-'/src/assets/stylesheet/responsive';
+@import "/src/assets/stylesheet/variable", "/src/assets/stylesheet/mixins", "/src/assets/stylesheet/functions",
+  "/src/assets/stylesheet/misc", "/src/assets/stylesheet/responsive";
 
 .about {
   padding: size(8) 0;
@@ -10,25 +7,25 @@
   &-img {
     position: relative;
 
-    @include tablet-landscape {
+    @include mobile-landscape {
       border-radius: 50%;
       overflow: hidden;
     }
 
-    @include tablet {
+    @include mobile-landscape {
       display: none;
     }
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       clip-path: polygon(0 0, 0% 100%, 100% 50%);
       background-color: rgba($color: $primary-color, $alpha: 0.25);
       width: 100%;
       height: 100%;
       left: 0;
 
-      @include tablet-landscape {
+      @include mobile-landscape {
         clip-path: none;
         content: none;
       }
@@ -39,9 +36,8 @@
       object-fit: contain;
       clip-path: polygon(0 0, 0% 100%, 200% 0%);
 
-      @include tablet-landscape {
+      @include mobile-landscape {
         clip-path: none;
-
       }
     }
   }
@@ -50,16 +46,11 @@
     p {
       color: $secondary-color;
       font-family: $secondary-font;
-
-      @include tablet-landscape {
-        font-size: size(1.6)
-      }
     }
   }
 
-  .about-social {
-    @extend %flex,
-    %align-center;
+  &-social {
+    @extend %flex, %align-center;
     color: $primary-color;
     font-family: $primary-font;
     font-weight: $semi-bold;
@@ -72,11 +63,11 @@
       font-family: $primary-font;
       font-weight: $bold;
 
-      @include tablet-landscape {
+      @include mobile-landscape {
         font-size: size(2.5);
       }
 
-      @include tablet {
+      @include mobile-landscape {
         font-size: size(2);
       }
 
@@ -88,8 +79,7 @@
     ul {
       padding-left: 0;
       list-style: none;
-      @extend %flex,
-      %align-center;
+      @extend %flex, %align-center;
       column-gap: size(2);
       margin-bottom: 0;
 
@@ -102,13 +92,13 @@
           display: block;
           transform-origin: center;
 
-          @include tablet-landscape {
+          @include mobile-landscape {
             font-size: size(2.5);
             width: 25px;
             height: 28px;
           }
 
-          @include tablet {
+          @include mobile-landscape {
             font-size: size(2);
             width: size(2);
             height: size(2.2);
@@ -129,6 +119,79 @@
           }
         }
       }
+    }
+  }
+
+  @include mobile-landscape {
+    .mid-gap {
+      margin-bottom: size(3);
+    }
+  }
+
+  &-details {
+    margin-top: size(3.5);
+    background-color: lighten($color: $background, $amount: 5);
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    height: auto;
+    min-height: 100%;
+    margin-bottom: size(3);
+
+    &-icon {
+      width: size(8);
+      height: size(8);
+      margin: auto;
+
+      img {
+        object-fit: contain;
+        margin: auto;
+      }
+    }
+
+    &-top {
+      margin: size(2) 0;
+
+      h3 {
+        font-weight: 700;
+        color: $primary-link;
+      }
+
+      p {
+        font-size: size(1.5);
+        margin-bottom: 0;
+        color: $primary-color;
+      }
+    }
+
+    &-content {
+      h4 {
+        color: $primary-link;
+        font-size: size(2);
+        font-weight: 600;
+        margin-bottom: size(1.2);
+      }
+
+      p {
+        display: flex;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        font-size: size(1.2);
+        column-gap: size(1);
+        row-gap: size(1);
+        justify-content: center;
+
+        span {
+          padding: 5px 8px;
+          background-color: $background;
+          color: $primary-color;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    &-single {
+      margin: size(2) 0;
     }
   }
 }

@@ -10,13 +10,13 @@
   }
 }
 
-@mixin tablet {
+@mixin mobile-landscape {
   @media (max-width: 767px) {
     @content;
   }
 }
 
-@mixin tablet-landscape {
+@mixin tablet {
   @media (max-width: 991px) {
     @content;
   }

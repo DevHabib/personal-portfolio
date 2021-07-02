@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "doctorfinder-30971": {
+      "hosting": {
+        "habib-ng": [
+          "doctorfinder-30971"
+        ]
+      }
+    }
+  }
+}
